@@ -42,6 +42,7 @@ class ActionAcceptUrl(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         Global_Vars.recipe = Recipe((tracker.latest_message)['text'])
+        Global_Vars.current_step = 0;
         dispatcher.utter_message(text="Cool, let's get started with " + Global_Vars.recipe.recipe_name + "!")
         dispatcher.utter_message(text="Do you wanna go through the ingredients first (say ingredients) or go straight to the directions (say directions)?")
 
@@ -234,6 +235,7 @@ class ActionDoTransformation(Action):
                 dispatcher.utter_message(text=output)
                 dispatcher.utter_message(text="We've applied your transform, so we're ready to start from the top.")
                 dispatcher.utter_message(text="Wanna start with directions, or ingredients?")
+                Global_Vars.current_step = 0;
             else:
                 dispatcher.utter_message(text="Hmm, that doesn't seem to be a valid transform.")
 

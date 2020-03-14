@@ -1,6 +1,6 @@
 # cs-337-project-3
 
-# Recipes Tool
+# Recipes Bot.  Codename Ramsay
 ## Initialization
 First, make sure you cd into the bot folder.
 Ensure that you are running Python 3.7 or higher using the command `python3 --version`. The output should be of the form:
@@ -40,16 +40,24 @@ and then, on another command line / terminal window in the same directory, run:
 rasa shell
 ```
 
-Enter the url of the recipe at the prompt that appears.
-```commandline
-Recipe URL: https://www.allrecipes.com/recipe/218091/classic-and-simple-meat-lasagna/?clickId=right%20rail0&internalSource=rr_feed_recipe_sb&referringId=86587%20referringContentType%3Drecipe
-```
+From now, you have the bot, Ramsay, at your service.  Try it out.  Say hi!
 
 ## Usage
-The first thing you see when running our tool is a prompt to enter a recipe url.
-Simply paste the recipe's url in this area and hit return.
+It'll ask you for the recipe, so enter the URL at the prompt that appears.
+Enter the url of the recipe at the prompt that appears.  Sample URL:
+```commandline
+https://www.allrecipes.com/recipe/218091/classic-and-simple-meat-lasagna/?clickId=right%20rail0&internalSource=rr_feed_recipe_sb&referringId=86587%20referringContentType%3Drecipe
+```
 
-This will automatically load the online recipe, parse the ingredients and step, and display a prompt for transforming the recipe.
+From now on out, you can interact with the bot in a variety of ways.
+
+To print the ingredients at any time, just type "ingredients."
+
+To start the directions, say "directions."
+From then on out, say "next" to go to the next direction.
+
+To do a transform, type "transform" at any time.
+Then, type the transform when prompted for it.
 
 The [available transformations](#transformations) are:
 - [Adjust amount](#adjust-amount)
@@ -59,9 +67,6 @@ The [available transformations](#transformations) are:
 - [Change cuisine](#change-cuisine)
 - [Make healthier](#make-more-healthy)
 - [Make less healthy](#make-less-healthy)
-
-Also available at this prompt are quitting the program, verbosely printing the recipe, and resetting to a new recipe.
-These are referred to as [reserved transformations](#reserved-transformations).
 
 ## Transformations
 ### Adjust Amount
@@ -136,7 +141,5 @@ verbose
 Entering a recipe url as the transformation will reset the recipe to the one pointed to by the entered url.
 This deletes the data of the current recipe, beginning again from scratch.
 
-This can be used to reset the current recipe to it's original state (by entering the same url) or load a new recipe (by entering a different url).
-```commandline
-# any http:// or https:// link
-```
+#### Note
+This is a trained model.  The strings provided here are samples.  They are not the only way to trigger the commands.  You can say things like "I want a transformation" instead of "transform," for example.
