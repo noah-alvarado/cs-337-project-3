@@ -9,10 +9,50 @@
 - yo
 - I'm hungry
 
+## intent: specify_transformation
+ - adjust 2
+ - adjust 1.5
+ - adjust 1/2
+ - adjust 0.5
+ - adjust 25
+ - cuisine mexican
+ - cuisine italian
+ - vegify
+ - veganify
+ - healthy
+ - non-healthy
+ - meatify
 
 ## intent:action_test
 - show me an action
 - action
+
+## intent:start_directions
+- directions
+- Directions
+
+## intent:next_direction
+- next
+- next step
+- next direction
+- Next
+- Next Step
+- Next step
+- Next direction
+
+## intent:ingredient_prompt
+- ingredients
+- Ingredients
+
+## intent:ask_for_transform
+- transform
+- Transform
+- transformation
+- Transformation
+- I want a transformation
+- I wanna transform
+- I want to transform
+- I want transformation
 
 ## intent:give_url
 - https://*
