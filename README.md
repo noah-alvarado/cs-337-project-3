@@ -1,6 +1,8 @@
 # cs-337-project-3
+
 # Recipes Tool
 ## Initialization
+First, make sure you cd into the bot folder.
 Ensure that you are running Python 3.7 or higher using the command `python3 --version`. The output should be of the form:
 ```commandline
 Noahs-MacBook-Air:cs-337-project-2 noahalvarado$ python3 --version
@@ -18,12 +20,24 @@ Swtich to the virtual environment you just created and install the necessary pac
 source venv/bin/activate
 python3 -m pip install -r requirements.txt
 ```
+
+Because Rasa has different dependencies on different operating systems, you now need to install Rasa separately:
+```commandline
+pip install rasa
+```
+
 Now, you are ready to run Recipes Tool.
 
 ## Running
-To use our tool, run the command:
+To use our tool, run the commands:
+
 ```commandline
-python3 recipes_tool.py
+rasa train
+rasa run actions
+```
+and then, on another command line / terminal window in the same directory, run:
+```commandline
+rasa shell
 ```
 
 Enter the url of the recipe at the prompt that appears.
