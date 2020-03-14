@@ -131,15 +131,10 @@ This serves the same purpose as halting the program using ctrl/command + c.
 stop
 ```
 
-#### Verbose Printing
-This prints the recipe's representation in much more detail than is typically shown before and after transformations.
-This print only happens once and the transformation is not remembered as a preference, so this transformation must be called whenever a verbose print is desired.
-```commandline
-verbose
-```
 #### New Recipes
 Entering a recipe url as the transformation will reset the recipe to the one pointed to by the entered url.
 This deletes the data of the current recipe, beginning again from scratch.
 
-#### Note
+#### Notes
 This is a trained model.  The strings provided here are samples.  They are not the only way to trigger the commands.  You can say things like "I want a transformation" instead of "transform," for example.
+Also, there is no verbose printing,  because people don't typically want that kind of information from a bot.
